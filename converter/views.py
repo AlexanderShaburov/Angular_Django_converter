@@ -19,7 +19,7 @@ def provide_token(request):
     
     token = get_token(request)
     response = JsonResponse({'csrfToken': token})
-    response["Access-Control-Allow-Origin"] = "https://localhost:4200"
+    response["Access-Control-Allow-Origin"] = "http://localhost:4200"
     response["Access-Control-Allow-Credentials"] = "true"
     response.set_cookie(
         'csrftoken',
